@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect} from 'react';
 
 export default function User(props) {
   const [userName, setUserName] = useState('');
@@ -10,6 +10,7 @@ export default function User(props) {
 
   useEffect(() => {
     console.log('Username changes :: ', userName);
+
     return () => { console.log('Effect is getting cleaned up')}
   }, [userName]);
 
